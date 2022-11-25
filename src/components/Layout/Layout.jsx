@@ -1,12 +1,11 @@
 import { AppBar } from 'components/AppBar/AppBar';
-import { Box } from 'components/Box/Box';
 import { Outlet } from 'react-router-dom';
-
+// import * as SC from 'components/styled';
 export const Layout = () => {
   return (
-    <Box display="block">
+    <div>
       <AppBar />
       <Outlet />
-    </Box>
+    </div>
   );
 };
