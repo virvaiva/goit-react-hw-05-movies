@@ -1,11 +1,24 @@
-import { AppBar } from 'components/AppBar/AppBar';
 import { Outlet } from 'react-router-dom';
-// import * as SC from 'components/styled';
+import { Suspense } from 'react';
+import * as SC from './Loyaut.styled';
+import { Loader } from 'components/Loader/Loader';
+
 export const Layout = () => {
   return (
-    <div>
-      <AppBar />
-      <Outlet />
-    </div>
+    <SC.Container>
+      <SC.Header>
+        <SC.Section>
+          <SC.Nav>
+            <SC.StyledLink to="/" end>
+              Home
+            </SC.StyledLink>
+            <SC.StyledLink to="movies">Movies</SC.StyledLink>
+          </SC.Nav>
+        </SC.Section>
+      </SC.Header>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
+    </SC.Container>
   );
 };
