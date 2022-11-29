@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import * as SC from './Loyaut.styled';
 import { Loader } from 'components/Loader/Loader';
 
-export const Layout = () => {
+export default function SharedLayout() {
   return (
     <SC.Container>
       <SC.Header>
@@ -21,4 +21,4 @@ export const Layout = () => {
       </Suspense>
     </SC.Container>
   );
-};
+}
