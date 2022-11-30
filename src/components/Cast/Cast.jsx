@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as SC from './Cast.styled';
 
-export const Cast = () => {
+export default function Cast() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
 
@@ -43,4 +43,4 @@ export const Cast = () => {
       )}
     </SC.SectionDiv>
   );
-};
+}

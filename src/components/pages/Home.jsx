@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { getPopularMovies } from 'components/API/API';
 import * as SC from 'components/StyledPages/Home.styled';
 
-export const Home = () => {
+export default function Home() {
   const [movies, setMovies] = useState([]);
   const location = useLocation();
 
@@ -40,4 +40,4 @@ export const Home = () => {
       </SC.PopUl>
     </SC.Section>
   );
-};
+}

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { infoActor } from '../API/API';
 import * as SC from './Rewies.styled';
 
-export const Reviews = () => {
+export default function Reviews () {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
 

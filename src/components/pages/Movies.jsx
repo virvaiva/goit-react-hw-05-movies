@@ -5,7 +5,7 @@ import * as SC from '../StyledPages/Movies.styled';
 import { Search } from 'components/Search/Search';
 import { FaRegSadCry } from 'react-icons/fa';
 
-export const Movies = () => {
+export default function Movies() {
   const [searchMovies, setSearchMovies] = useState('');
   const location = useLocation();
 
@@ -54,4 +54,4 @@ export const Movies = () => {
       </SC.Section>
     </main>
   );
-};
+}

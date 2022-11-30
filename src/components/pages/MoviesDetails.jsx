@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import * as SC from '../StyledPages/MoviesDetails.styled';
 import { getAllMovies } from 'components/API/API';
 
-export const MovieDetails = () => {
+export default function MovieDetails() {
   const { movieId } = useParams();
   const location = useLocation();
   const [filmsInfo, setFilmsInfo] = useState();
@@ -70,4 +70,4 @@ export const MovieDetails = () => {
       </SC.Section>
     </main>
   );
-};
+}
